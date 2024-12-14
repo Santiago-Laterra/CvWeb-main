@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="html5.ico">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <!-- HTML Meta Tags -->
+    <title>CV</title>
+    <meta name="description" content="Programador web">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://laterayo.github.io/CvWeb/">
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="CV">
+    <meta property="og:description" content=" Programador web">
+    <meta property="og:image" content="https://raw.githubusercontent.com/LateRayo/CvWeb/main/Perfil.jpg">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="laterayo.github.io">
+    <meta property="twitter:url" content="https://laterayo.github.io/CvWeb/">
+    <meta name="twitter:title" content="CV">
+    <meta name="twitter:description" content="Programador web">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/LateRayo/CvWeb/main/Perfil.jpg">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+
+                <h1>Estudiante Desarrollador web</h1>
+
+            <!----------------- navegacion  --------------------->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+                <li class="primero"><a href="#perfil">Quien soy</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#educacion">Educación</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <br>
+        <!----------------- perfil  --------------------->
+        <h2 id="perfil" >Quien soy</h2>
+            <section class="perfil">
+                <div>
+                    <center><img  src="Perfil.jpg" alt="foto de perfil" title="No soy yo xD" ></center>
+                </div>
+                <div id="descripcion">
+                    <div>
+                        <ul class="EdadyNombre">
+                            <li>Nombre: Santigo Laterra</li>
+                            <li class="Edad">Edad: 21 años</li>
+                            <li class="contacto">mimail@mail.com</li>
+                            <li class="ciudad">mi Ciudad</li>
+                        </ul>
+                    </div>
+                    <p>
+                    Soy una persona amable, pacífica y compasiva, con una mentalidad analítica y deductiva. 
+                    Me apasiona la tecnología y me considero un entusiasta de la programación web. 
+                    Aunque no tengo experiencia laboral previa, estoy deseando adquirirla y dispuesto a poner en práctica todo lo que he aprendido hasta ahora.
+                    </p>
+                </div>
+            </section>
+            <!----------------- Habilidades  --------------------->
+        <h2 id="habilidades">Habilidades</h2>
+        <div class="habilidades">
+            <div>
+                <img src="c_logo.png" alt="Lenguaje C" id="c">
+                <h2 style="align-self: center;">C</h2>
+            </div>
+            <div>
+                <img src="python_logo.png" alt="python"id="python">
+            </div>
+            <div>
+                <img src="JS_logo.png" alt="JavaScript" id="js">
+            </div>
+            <div>
+                <img src="electronica_logo.png" alt="electronica" id="electronica">
+            </div>
+            <div>
+                <img src="punteado.png" alt="Proximamente" id="punteado">
+            </div>
+        </div>
+
+
+
+        <!----------------- Proyectos  --------------------->
+        <h2 id="proyectos">Proyectos</h2>
+        <div class="proyectos">
+            <div class="subflexbox">
+                <div>
+                <i class="fa-solid fa-folder"></i>
+                <a class="Cv-izquierda" href="#">CV Web</a>
+                </div>
+                <div id="centro">
+                    <p>v.1.0</p>
+                </div>
+                <div>
+                    <a id="preview" preview="1" href="#proyectos">Pre-view</a>
+                </div>
+                <!------------  imagen pre-view 1  -------------->
+                <div class="modal1">
+                    <div class="modal-contenido">
+                        <span class="modal-cerrar" preview="4">&times;</span>
+                        <img src="Perfil.jpg" alt="perfil" class="imgpreview">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="subflexbox">
+                <div>
+                    <i class="fa-solid fa-folder"></i>
+                    <a class="Cv-izquierda" href="#">Infobae</a>
+                </div>
+                <div id="centro">
+                    <p>v.4.7</p>
+                </div>
+                <div>
+                    <a id="preview" preview="2" href="#proyectos">Pre-view</a>
+                </div>
+                <!------------  imagen pre-view 2  -------------->
+                <div class="modal2">
+                    <div class="modal-contenido">
+                        <span class="modal-cerrar" preview="4">&times;</span>
+                        <img src="proyecto2.png" alt="pagina de Infobae" class="imgpreview">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="subflexbox">
+                <div>
+                    <i class="fa-solid fa-folder"></i>
+                    <a class="Cv-izquierda" href="#">Gob. Site </a></div>
+                <div id="centro">
+                    <p>v.1.1</p>
+                </div>
+                <div>
+                    <a id="preview" preview="3" href="#proyectos">Pre-view</a>
+                </div>
+                <!------------  imagen pre-view 3  -------------->
+                <div class="modal3">
+                    <div class="modal-contenido">
+                        <span class="modal-cerrar" preview="4">&times;</span>
+                        <img src="proyecto1.png" alt="pagina del gobierno" class="imgpreview">
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!----------------- Educacion  --------------------->
+        <h2 id="educacion">Educacion</h2>
+        <div class="educacion">
+            <div class="columna-izquierda">
+                <div class="contedor-div-centrado">
+                    <div class="izquierda"><i class="fa-sharp fa-solid fa-graduation-cap"></i>
+                        Curso : HTML y CSS
+                    </div>
+                    <div><i class="fa-sharp fa-solid fa-graduation-cap"></i>
+                        taller : Teatro (2 Años)
+                    </div>
+                    <div><i class="fa-sharp fa-solid fa-graduation-cap"></i>
+                        Curso : Python
+                    </div>
+                </div>  
+            </div>
+            <div class="columna-derecha">
+                <div class="contedor-div-centrado">
+                    <div class="izquierda"><i class="fa-sharp fa-solid fa-graduation-cap"></i>
+                        Curso : JavaScript
+                    </div>
+                    <div><i class="fa-sharp fa-solid fa-graduation-cap"></i>
+                        Curso : prgramacion en C 
+                    </div>
+                    <div><i class="fa-sharp fa-solid fa-graduation-cap"></i>
+                        taller : electronica 
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <!----------------- pie de pagina  --------------------->
+        <ul class="footer"><p>Contacto :</p>
+            <li><a href="#">mailprincipal@mail.com</a></li>
+            <li><a href="#">mailsecundario@mail.com</a></li>
+            <li><a href="#">linkedin</a></li>
+        </ul>
+    </footer>
+    <script src="https://kit.fontawesome.com/2a7c3aae7a.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

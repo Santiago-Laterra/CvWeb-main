@@ -1,0 +1,484 @@
+/*
+selector 
+{
+    propiedad: valor
+}
+*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+
+    background-color: #0d1117;
+    color: #ffffff;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+}
+/*BARRA*/
+header{
+
+    background: #21262d;
+    clear: both;
+    content: ' ';
+    width: 100%;
+    display: table;
+
+}
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;  /* Añadido para que el pseudo-elemento se posicione correctamente */
+}
+
+nav ul li a::before {
+    content: '';
+    display: block;
+    width: 0%; /* Empieza con un ancho de 0% */
+    background: #444;
+    height: 2px; /* Reducido para hacer la línea más delgada */
+    position: absolute;
+    bottom: -5px; /* Aumentado para mover la línea más abajo */
+    left: 0;
+    transition: width 0.1s ease;
+}
+
+/* Para activar la animación en el hover (ejemplo) */
+nav ul li a:hover::before {
+    width: 100%; /* El pseudo-elemento se expande al 100% del ancho del enlace */
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+h2{
+    
+    padding: 0;
+    display: flex ;
+    width: 92%;
+    max-width: 1340px;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 10px;
+}
+
+
+/* Barra de navegación principal */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; /* Necesario para el posicionamiento absoluto del menú */
+}
+
+/* Ocultar el label y el input por defecto */
+input {
+    display: none;
+}
+
+label {
+    display: none;
+}
+
+/* Estilo del menú */
+.menu {
+    display: flex;
+    justify-content: space-evenly; /* Espaciado entre elementos */
+    flex-grow: 1;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+/* Icono de menú (hamburguesa) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 768px) {
+    /* Menú desplegable en pantallas pequeñas */
+    .menu {
+        display: none; /* Oculta el menú inicialmente */
+        flex-direction: column; /* Los elementos se apilan verticalmente */
+        position: absolute;
+        top: calc(100%); /* Siempre debajo de la barra de navegación */
+        left: 0;
+        width: 100%;
+        background-color: #21262d;
+        padding: 10px 0;
+        box-shadow: 0px 5px 15px #fffcfc9b;
+    }
+
+    .menu li {
+        margin: 10px 0; /* Espaciado vertical entre los elementos */
+    }
+
+    /* Mostrar el icono de menú */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Mostrar el menú cuando el checkbox está marcado */
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 412px) {
+    /* Ajuste adicional si es necesario */
+    .menu {
+        padding: 15px 10px; /* Más espaciado interno para mejor legibilidad */
+    }
+}
+.perfil{
+
+    border: 1px solid;
+    border-radius: 4px;
+    background: #21262d;
+    display: flex ;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.EdadyNombre{
+
+    list-style-position: inside ;
+    padding: 10px;
+}
+
+
+#foto_de_perfil{
+
+    background-color: #21262d;  /* Quitarlo si no lo necesito */ 
+}
+
+section div img {
+
+    border-radius: 4px;
+    width: 90%;
+    max-width: 350px;
+    margin: 10px;
+
+}
+
+#descripcion{
+
+    border: 10px solid #21262d;
+    background-color: #21262d;
+    width: 90%;
+    max-width: 600px;
+    padding: 0;
+
+}
+section div p {
+
+    margin: 10px;
+    text-align: justify;
+
+}
+    
+.habilidades{
+    border: 1px solid;
+    border-radius: 4px;
+    background: #21262d;
+    display: flex ;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.habilidades div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra la imagen y el texto horizontalmente */
+    text-align: center; /* Alinea el texto */
+    margin: 10px;
+}
+
+.habilidades img {
+    display: block; /* Asegura que las imágenes respeten el flujo de bloque */
+    margin-bottom: 5px; /* Añade espacio entre la imagen y el texto */
+}
+
+.habilidades h2 {
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    color: #ffffff; /* Color blanco para el texto */
+    margin: 0; /* Elimina márgenes extras */
+}
+#c{
+
+    margin: 5px;
+    width: 90%;
+    max-width: 100px;
+}
+
+#python{
+
+    margin: 5px;
+    width: 90%;
+    max-width: 100px;
+}
+
+#js{
+
+    margin: 5px;
+    width: 90%;
+    max-width: 90px;
+}
+
+#electronica{
+
+    margin: 5px;
+    width: 90%;
+    max-width: 100px;
+
+}
+
+#punteado{
+
+    margin: 5px;
+    width: 90%;
+    max-width: 100px ;
+}
+.proyectos {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 4px;
+    width: 90%;
+    margin: auto;
+    background: #21262d;
+}
+
+/*Estilos del Proyecto*/
+#centro {
+    margin: auto;
+}
+
+.proyectos div a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.proyectos div i {
+    margin-right: 6px;
+}
+
+.proyectos div p {
+    font-size: 18px;
+}
+.subflexbox {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    position: relative; /* Necesario para posicionar el elemento central */
+    padding: 3px 10px;
+}
+
+/* Primera columna (icono y texto) */
+.subflexbox > div:first-child {
+    flex-basis: 40%; /* Ancho ajustable */
+    white-space: nowrap; /* Evita saltos de línea */
+    overflow: hidden; /* Oculta contenido extra */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es largo */
+    text-align: left;
+}   
+
+/* Columna central (v.1.0) */
+.subflexbox > div:nth-child(2) {
+    position: absolute; /* Lo posicionamos con respecto a .subflexbox */
+    left: 50%; /* Lo llevamos al centro horizontal */
+    transform: translateX(-50%); /* Lo ajustamos para que quede exactamente centrado */
+    text-align: center;
+}
+
+/* Última columna (botón "Pre-view") */
+.subflexbox > div:last-child {
+    flex-basis: 40%; /* Ancho ajustable */
+    text-align: right; /* Alineación a la derecha */
+}
+
+
+
+
+
+/* imagenes Pre-view*/
+.modal1, .modal2 ,.modal3 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.modal-contenido {
+
+    margin: 50px auto ; /* centrar vertical y horizontalmente */
+    padding: 40px 20px 20px 20px;
+    width: 80%;
+    max-width: 800px; /* ancho máximo */
+    position: relative;
+}
+
+.modal-cerrar {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.imgpreview{
+
+    border:10px solid #c2c1c1;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/*Seccion Educacion*/
+
+.educacion{
+
+    border: 1px solid;
+    border-radius: 4px;
+    background: #21262d;
+    display: flex;
+    flex-flow: row;
+    width: 90%;
+    margin-top: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.columna-izquierda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    width: 50%;
+    align-items: center;
+}
+
+.columna-derecha{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    width: 50%;
+    align-items: center;
+    
+}
+.educacion div{
+    font-size: 18px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 5px;
+}
+
+
+.educacion div i{
+    
+    margin-right: 5.5px;
+
+}
+
+/*Responsive Edcuacion*/
+
+@media(max-width:620px){
+    .educacion {
+        display: flex; /* Activa Flexbox */
+        flex-direction: column; /* Cambia la dirección a vertical */
+        justify-content: center; /* Centra verticalmente las cajas en el contenedor */
+        align-items: center; /* Centra horizontalmente las cajas en el contenedor */
+        margin-right: auto;
+        margin-top: auto;
+        margin-left: auto;
+        margin-bottom: 40px;
+        width: 90%; /* Ajusta el ancho para pantallas pequeñas */
+    }
+
+    .columna-izquierda, .columna-derecha {
+        
+        width: 70%; /* Cada columna ocupa el 100% */
+        align-items: flex-start; /* Alinea el contenido desde el inicio de la columna */
+        
+        
+    }
+
+    .educacion div {
+        justify-content: center; /* Centra ícono y texto horizontalmente */
+        text-align: left; /* Alinea el texto a la izquierda */
+        white-space: nowrap; /* Evita cortes de palabras */
+        padding: 0px;
+    }
+    .contedor-div-centrado div{
+        width: 100%;
+        white-space: nowrap; /* Evita cortes de palabras */
+        overflow: hidden; /* Oculta el contenido que desborda */
+        padding-top: 3px;
+    }
+}
+
+
+
+footer{
+    
+    
+    font-size: 18px;
+    background: #21262d;
+    
+
+}
+
+.footer{
+    
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 20%;
+}
+
+footer li{
+
+    list-style: none;
+    margin-left: 3%;
+    padding: 5px 0;
+
+}
+footer a{
+
+    text-decoration: none;
+    color: #ffffff;
+
+}
